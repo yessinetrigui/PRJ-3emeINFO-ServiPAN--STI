@@ -1,0 +1,790 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+body{
+  overflow-x: hidden;
+}
+header{
+  display: inline-block;
+}
+header div {
+  margin: 20px;
+  float: left;
+}
+header nav {
+  float: right;
+  padding: 15px;
+  margin-left: 800px;
+
+}
+header nav ul li {
+  display: inline-block;
+  font-size: 35px;
+  font-family: cursive;
+  margin: 0px 15px;
+}
+header nav ul li a{
+  color: black;
+
+}
+header nav ul li a:hover{
+  color: indigo;
+  transform: translate(-30deg);
+
+}
+/*********************  ************************************/
+
+/*******************       S E C T I O N  I       *****************/
+#SEC-1 {
+  display: inline-block;
+  width: 100%;
+  margin-top: -55px;
+  height: 100vh;
+  position: relative;
+}
+#SEC-1 #Text {
+  float: left;
+  margin-left: 85px;
+  margin-top: 140px;
+
+}
+#SEC-1 #Text h1 {
+  font-size: 70px;
+  font-family: 'Goldman', cursive;
+}
+#SEC-1 #Text h2 {
+  font-size: 60px;
+  font-family: 'Goldman', cursive;
+  color: gray;
+}
+#SEC-1 #Text p {
+  width: 800px;
+  font-size: 35px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+
+}
+#SEC-1 #Text #btn {
+  width: 300px;
+  margin: 20px auto;
+}
+#SEC-1 #Text button {
+  transition-duration: 1.2s;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 40px;
+  padding: 15px;
+  width: 250px;
+  margin: auto;
+}
+#SEC-1 #Text button:hover {
+  transition-duration: 1.2s;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+  color: white;
+}
+#SEC-1 #Pic {
+  float: right;
+  margin-right: 65px;
+ 
+}
+#SEC-1 #Pic #ph1 {
+  width: 897px;
+  height: 829px;
+  background-image: url("../Images/img-1.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#SEC-1 #Pic #ph2 {
+  width: 600px;
+  height: 400px;
+  margin: -350px 150px;
+  background-image: url("../Images/img-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/**************************** S E C T I O N II ***********************/
+
+#SEC-2{
+  margin-top: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+  background-color: #468AC9;
+}
+.ART{
+  width: 420px;
+  height: 430px;
+  background-color: white;
+  display: inline-block;
+  margin:0 40px ;
+  height: 430px;
+  top: -80px;
+  position: relative;
+}
+.ART:hover{
+  box-shadow: 2px 2px 40px black;
+}
+#SEC-2 .SHAPE-CIRC{
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: #468AC9;
+  margin: 20px auto;
+}
+#SEC-2 .SHAPE-CIRC img{
+  width: 90px;
+  position: relative;
+  padding: 13px;
+  filter:invert(100%);
+
+}
+#SEC-2 .ART .TXT-1{
+  margin: 20px 0px;
+  text-align: center;
+  font-family: 'Goldman', cursive;
+  font-size: 25px;
+  color: #468AC9;
+}
+#SEC-2 .ART .TXT-2{
+  margin: 15px 0px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 20px;
+  margin: auto;
+  width: 310px;
+  filter: opacity(0.8);
+}
+
+/**************************** S E C T I O N III ***********************/
+#SEC-3{
+  display: inline-block;
+  width: 100%;
+  height: 860px;
+  background-color: #E5E5E5;
+}
+#SEC-3 h1{
+  margin: 30px 0;
+  font-size: 110px;
+  line-height: 126px;
+  text-align: center;
+  font-family: cursive;
+  color: #000000;
+}
+#SEC-3 p{
+  margin: 30px 0;
+  font-size: 25px;
+  text-align: center;
+  font-family: cursive;
+  width: 1200px;
+  margin: 30px auto;
+  color: #000000;
+}
+#SEC-3 #btn{
+  margin: auto;
+  text-align: center;
+}
+#SEC-3 button{
+  width: 230px;
+  height: 100px;
+  font-size: 30px;
+  background-color: #4989C7;
+  border:none;
+  color: white;
+  transition-duration: 2s;
+
+}
+#SEC-3 button:hover {
+  filter: drop-shadow(0 0 0.75rem blue);
+  transition-duration: 1s;
+  transform: scale(1.2);
+}
+/**************************** S E C T I O N   IV ***********************/
+#SEC-4{
+  display: inline-block;
+  width: 100%;
+  height: 1000px;
+  background-image: url(../Images/img-3.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+}
+#SEC-4 article{
+  width: 650px;
+  height: 780px;
+  border:8px solid #E3C23C;
+  margin: 50px 0 0 50px;
+  background-color: #468AC9;
+}
+#SEC-4 h1{
+  margin-top: 100px;
+  margin-left: 60px;
+  color: white;
+  font-size: 30px;
+  font-family: monospace;
+}
+#SEC-4 h2{
+  margin-left: 80px;
+  color: black;
+  font-size: 100px;
+  font-family: monospace;
+}
+#SEC-4 .LINE{
+  width: 400px;
+  height: 20px;
+  display: inline-block;
+  background-color: #E7C523;
+  margin-top: 30px;
+  margin-left: 110px;
+}
+/**************************** S E C T I O N   V ***********************/
+#SEC-5{
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  background-image: url(../Images/img-4.jpg);
+  background-color: grey;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#SEC-5 #TXT-1{
+  margin: 20px 60px;
+  font-size: 80px;
+  font-family: cursive;
+}
+#SEC-5 #TXT-2{
+  margin: 30px 80px;
+  font-size: 25px;
+  width: 800px;
+  font-family: cursive;
+}
+#SEC-5 #ARTS{
+  width: 85%; 
+  height: 600px;
+  margin: 120px auto;
+
+}
+#SEC-5 .ART{
+  background-color: rgb(255, 255, 255);
+  height: 610px;
+  width: 500px;
+  margin: 0px 15px;
+}
+#SEC-5 #ARTS .ART .img{
+  width: fit-content;
+  margin: 50px auto;
+}
+#SEC-5 #ARTS .ART .TXT-1{
+  text-align: center;
+  font-family: 'Goldman', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: gold;  
+}
+#SEC-5 #ARTS .ART .TXT-2{
+  margin-top: 20px;
+ text-align: center;
+ width: 350px;
+ margin: 20px auto;
+ font-size:20px;
+}
+/**************************** S E C T I O N  VI ***********************/
+#SEC-6{
+  width: 100%;
+  /*height: 100vh;*/
+  background-color: #1A1A1A;
+}
+#SEC-6 #TXT-1 h1{
+  width: fit-content;
+  margin: auto ;
+  padding: 40px 0px 5px 0px;
+  color: white;
+  font-family: 'Goldman', cursive;
+  font-size: 40px;
+}
+#SEC-6 #TXT-DESC h1{
+  width: fit-content;
+  margin:40px auto ;
+  color: rgb(145, 142, 142);
+  font-family: 'Goldman', cursive;
+  font-size: 20px;
+  width: fit-content;
+}
+#SEC-6 #G-CONT{
+  width: 100%;
+  height: fit-content;
+  padding: 10px 0px;
+}
+#SEC-6 #G-CONT .S-CONT{
+  height: 300px;
+  margin: 15px auto;
+  display: flex;
+  justify-items: space-between;
+  align-items: center;
+  justify-content: center;
+}
+#SEC-6 #G-CONT .S-CONT .P-CONT{
+  margin: auto;
+  display: inline-block;
+  width: 500px;
+  height: 230px;
+  margin: 30px;
+}
+#SEC-6 #G-CONT .S-CONT .P-CONT .TXT-1{
+  font-size: 40px;
+  color: #557FAD;
+  font-family: 'Texturina', serif;
+
+}
+#SEC-6 #G-CONT .S-CONT .P-CONT .DESC{
+  font-size: 20px;
+  margin-top: 15px;
+  color: #ffffff;
+  font-family: 'Texturina', serif;
+
+}
+/**************************** S E C T I O N  VII ***********************/
+#SEC-7{
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+}
+#SEC-7 .bg{
+  background-color:#E5E5E5;
+  height: 1000px;
+  width: 50%;
+  position: relative;
+  float: left;
+
+}
+#SEC-7 .BOX{
+  background-color:#468AC9;
+  height: 1100px;
+  width: 969px;
+  height: 643px;
+  margin-top: 260px;
+  margin-left: 120px;
+  position: absolute;
+
+}
+#SEC-7 .BOX .Img-Box{
+  float: left;
+  width: 969px;
+  height: 643px;
+  margin-top: -90px;
+  margin-left: 110px;
+  background-image: url("../Images/img-8.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#SEC-7 .TXT{
+  width: 440px;
+  float: right;
+  margin-top: 380px;
+  margin-right: 200px;
+  text-align: left;
+}
+#SEC-7 .TXT .TXT-1{
+  font-size: 50px;
+  font-family: cursive;
+}
+#SEC-7 .TXT .TXT-2{
+  font-size: 25px;
+  font-family: monospace;
+  margin-top: 25px;
+}
+#SEC-7 .TXT #btn {
+  
+  width: 250px;
+  margin: auto;
+  margin-top: 20px;
+}
+#SEC-7 .TXT #btn button{
+  transition-duration: 1.2s;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 40px;
+  padding: 15px;
+  width: 250px;
+  margin: auto;
+}
+#SEC-7 .TXT #btn button:hover{
+  transition-duration: 1.2s;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+  color: white;
+
+}
+/**************************** S E C T I O N  VIII ***********************/
+#SEC-8 {
+  display: inline-block;
+  background-color: #1A1A1A;
+  height: fit-content;
+  width: 100%;
+}
+#SEC-8 #BOX-1{
+  width: 1175px;
+  height: 800px;
+  background-color: white;
+  float: right;
+  margin-right: 104px;
+  margin-top: 90px;
+}
+#SEC-8 #BOX-2{
+  width: 585px;
+  height: 631px;
+  background-color: #468AC9;
+  float: right;
+  margin-right: 979px;
+  margin-top: 90px;
+  box-shadow: 2px 6px 20px 1px black;
+}
+#SEC-8 #BOX-1 #BOX-2 #TXT-DESC{
+  margin-top: 120px;
+  margin-left: 60px;
+}
+#SEC-8 #BOX-1 #BOX-2 .TXT{
+  margin-top: 25px;
+  font-size: 30px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+
+}
+#SEC-8 #BOX-1 #BOX-2 .DESC{
+  font-size:25px;
+  margin-top: 15px;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+#SEC-8 #BOX-1 form{
+  margin-top: 100px;
+    margin-left: 292px;
+    position: absolute;
+}
+#SEC-8 #BOX-1 form .inp, #txtar{
+  padding: 20px;
+  display: block;
+  margin: 25px;
+  width: 700px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 25px;
+}
+#SEC-8 #BOX-1 #btn{
+  width: fit-content;
+  margin: auto;
+  margin-top: 15px;
+}
+#SEC-8 #BOX-1 #btn input{
+  transition-duration: 1.2s;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 40px;
+  padding: 15px;
+  width: 250px;
+  margin: auto;
+}
+#SEC-8 #BOX-1 #btn input:hover{
+  transition-duration: 1.2s;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+  color: white;
+}
+
+/***************************** F O O T E R *****************************/
+footer{
+  margin-top: -20px;
+}
+footer #FT-2{  
+  display: inline-block;
+  width: 100%;
+  height: 384px;
+  background-color: black;
+}
+footer #FT-2 h1{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  color: white;
+  letter-spacing: 15px;
+  margin-top: 120px;
+}
+/**************************** R E S P O N S I V E ***********************/
+@viewport {
+  width: 100vw;
+}
+@media screen and (max-width:1800px){
+ header div{
+   width: 50px;
+   height: 50px
+ }
+ header nav{
+   margin-top: 25px;
+   padding: 12px;
+   margin-left: 470px;
+
+}
+ header nav ul li{
+   margin-left: 15px;
+   font-size: 1.8em;
+ }
+ /******** SECTION 1 ***********/
+ #SEC-1 #Text {
+  margin-left: 25px;
+}
+#SEC-1 #Text h1 {
+  font-size: 45px;
+}
+#SEC-1 #Text h2 {
+  font-size: 3em;
+}
+#SEC-1 #Text p {
+  width: 550px;
+  font-size:20px;
+
+}
+#SEC-1 #Pic {
+    margin-right: 20px;
+    margin-top: -35px;
+}
+#SEC-1 #Pic #ph1 {
+  width: 600px;
+}
+#SEC-1 #Pic #ph2 {
+  width: 300px;
+
+}
+  /***************** *************/
+  #SEC-2 .ART .TXT-1{
+    font-size: 15px;
+  }
+  #SEC-2 .ART .TXT-2{
+    font-size: 15px;
+    width: 200px;
+  }
+  #SEC-2 .ART{
+    width: 300px;
+    margin: 0 20px;
+  }
+  /********** ********************/
+  #SEC-5 #ARTS{
+    margin:110px auto;
+
+  }
+  #SEC-5 .ART{
+    width: 360px;
+    margin: 0px 8px;
+    box-shadow: 1px 2px 17px -9px black;
+  }
+  #SEC-5 .ART .img img{
+    width: 300px;
+    height: 300px;
+  }
+  /************ *******************/
+  #SEC-7 .BOX{
+    width: 750px;
+    margin-left: 40px;
+    height:520px;
+  }
+  #SEC-7 .BOX .Img-Box{
+    margin-left: 40px;
+    width: 750px;
+  }
+  #SEC-7 .TXT{
+    margin-right: 40px;
+  }
+  #SEC-7 .TXT .TXT-1{
+    font-size: 35px;
+
+  }
+  #SEC-7 .TXT .TXT-2{
+    font-size: 18px;
+  }
+  /**************** ****************/
+  #SEC-8 #BOX-1{
+    width: 900px;
+  }
+  #SEC-8 #BOX-1 form{
+    margin-left: 180px;
+  }
+  #SEC-8 #BOX-1 form .inp, #txtar{
+    width: 600px;
+  }
+  #SEC-8 #BOX-1 #BOX-2 {
+    width:500px;
+    margin-right: 730px;
+  }
+  #SEC-8 #BOX-1 #BOX-2 #TXT-DESC{
+    margin-left: 40px;
+
+  }
+  #SEC-8 #BOX-1 #BOX-2 .TXT{
+    font-size: 20px;
+  }
+  /******************/
+
+}
+@media screen and (max-width:500px){
+header {display: none;}
+body{
+  overflow-x: hidden;
+  }
+#SEC-1{
+  background-image:url(../Images/img-1.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 0px;
+  padding-bottom: 50px;
+  height: fit-content;
+  
+}  
+#SEC-1 #Text{ 
+    margin-left: 8px;
+    margin-top: 70px;
+}
+#SEC-1 #Text p {
+  width: 450px;
+  font-size: 30px;
+  background-color: #00000071;
+  padding: 10px;
+  font-family: cursive;
+  color: white;
+}
+ #SEC-1 #Text p::after{
+  content: '';
+  background-image:url(../Images/img-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+ #SEC-1 #Pic{
+   display: none;
+ }
+ #SEC-2 {
+   margin-top: 90px;
+  height: 1861px;
+  flex-direction: column;
+
+}
+#SEC-3  {
+  height: 1000px;
+}
+#SEC-3 p {
+  font-size: 18px;
+  width: 450px;
+}
+#SEC-4 article {
+  width: 453px;
+  border: 4px solid #E3C23C;
+  margin: 50px 0 0 10px;
+}
+#SEC-4 h1 {
+  margin-top: 37px;
+
+}
+#SEC-4 h2 {
+  margin-left: 54px;
+  font-size: 88px;
+}
+#SEC-4 .LINE {
+
+  margin-left: 33px;
+}
+#SEC-5 {
+  height: 2604px;
+  background-image: linear-gradient(to left bottom, #c8bc43, #d3ba36, #e0b727, #edb417, #fbaf00);
+}
+#SEC-5 #TXT-2 {
+  margin: 20px 24px;
+  font-size: 20px;
+  width: 450px;
+
+}
+#SEC-5 .ART {
+  margin: 30px 8px;
+}
+#SEC-6 {
+  height: 2200px;
+}
+#SEC-6 #TXT-1 h1 {
+  text-align: center;
+}
+#SEC-6 #TXT-DESC h1 {
+  text-align: center;
+}
+#SEC-6 #G-CONT .S-CONT {
+
+  flex-direction: column;
+  margin-top: 280px;
+}
+#SEC-6 #G-CONT .S-CONT .P-CONT .TXT-1 {
+  margin-left: 30px;
+}
+#SEC-6 #G-CONT .S-CONT .P-CONT .DESC {
+  margin-left: 40px;
+}
+#SEC-6 #G-CONT .S-CONT #sep {
+  margin-top: 541px;
+}
+#SEC-7 .bg {
+  background-color: #E5E5E5;
+  height: 450px;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+#SEC-7 .BOX {
+  width: 450px;
+  margin-left: 8px;
+  height: 331px;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+#SEC-7 .BOX .Img-Box {
+  margin-left: -6px;
+  width: 400px;
+  margin-top: -174px;
+}
+#SEC-7 .TXT {
+  width: 440px;
+  float: right;
+  margin-top: 80px;
+  margin-right: 21px;
+  text-align: center;
+}
+#SEC-8 #BOX-1 {
+  height: 800px;
+  width: 450px;
+  background-color: transparent;
+  float: none;
+  margin-right: 0;
+  margin-top: 0;
+}
+#SEC-8 #BOX-1 form {
+  margin-top: 0;
+  margin-left: 0;
+  position: unset;
+}
+#SEC-8 #BOX-1 form .inp, #txtar {
+  width: 400px;
+}
+#SEC-8 #BOX-1 #BOX-2 {
+  height: 631px;
+  margin-right: 0px;
+  margin-top: 90px;
+  width: 500px;
+}
+#SEC-8 #BOX-1 #BOX-2 #TXT-DESC {
+  margin-left: 62px;
+}
+}

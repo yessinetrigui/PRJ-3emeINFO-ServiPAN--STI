@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ServiPAN</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="Scripts/j-query/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Addons/OnScrollAni/aos.css">
+    <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/1086/1086470.svg">
+
+
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PGc+PGc+PHBhdGggZD0ibTExIDUyaDR2NGgtNHoiIGZpbGw9IiNmZjgyNmUiLz48L2c+PGc+PHBhdGggZD0ibTMzIDQwdjE2aC00di0xNWgtMTR2NWgtNHYtMTUuNzNjLjY4LS4yOCAxLjM5LS40NyAyLjEyLS41N2wzLjg4LS41NnY3Ljg2aDEwdi03Ljg2bDMuMDUuNDRjMS4wMi4xNSAyLjAxLjQyIDIuOTUuODF6IiBmaWxsPSIjZmY4MjZlIi8+PC9nPjxnPjxwYXRoIGQ9Im0yNyAzN2gtMTBsNS01eiIgZmlsbD0iI2I0ZGQ3ZiIvPjwvZz48Zz48cGF0aCBkPSJtNTEuMDkgMzYuNjUtMy40NyA1LjAxYy0uNS43NC0xLjE4IDEuMzItMS45NCAxLjcyLS43Ny40LTEuNjQuNjItMi41My42Mi0uNzYgMC0xLjUxLS4xNi0yLjItLjQ3bC03Ljk1LTMuNTN2LTkuNjFjLjg2LjM0IDEuNjguNzkgMi40NCAxLjMybDcuNTYgNS4yOSAyLjg2LTQuMDkuMTQuMDkgNS4wNyAzLjYzeiIgZmlsbD0iI2I0ZGQ3ZiIvPjwvZz48Zz48cGF0aCBkPSJtMTEgNDZoNCAydjZoLTItNC0yYy0yLjIxIDAtNC0xLjc5LTQtNHYtOC45NGMwLTMuMTYgMS41OC02LjExIDQuMjEtNy44Ny41Ni0uMzcgMS4xNi0uNjggMS43OS0uOTJ6IiBmaWxsPSIjYjRkZDdmIi8+PC9nPjxnPjxwYXRoIGQ9Im0yMiAzMi01IDV2LTcuODZsMS0uMTR6IiBmaWxsPSIjYTBkNDY4Ii8+PC9nPjxnPjxwYXRoIGQ9Im0yNyAyOS4xNHY3Ljg2bC01LTUgNC0zeiIgZmlsbD0iI2EwZDQ2OCIvPjwvZz48Zz48cGF0aCBkPSJtMzMgNTZ2NmgtMTF2LTRoN3YtMnoiIGZpbGw9IiM5NjlmYWEiLz48L2c+PGc+PHBhdGggZD0ibTIyIDU4djRoLTExdi02aDR2MnoiIGZpbGw9IiM5NjlmYWEiLz48L2c+PGc+PHBhdGggZD0ibTE3IDUyaDNjLjgzIDAgMS41OC0uMzQgMi4xMi0uODhzLjg4LTEuMjkuODgtMi4xMmMwLTEuNjYtMS4zNC0zLTMtM2gtMy0ydi01aDE0djE1IDJoLTctN3YtMi00eiIgZmlsbD0iI2U2ZTllZCIvPjwvZz48Zz48cGF0aCBkPSJtMzUgOGMxLjEgMCAyIC45IDIgMiAwIC41NS0uMjIgMS4wNS0uNTkgMS40MS0uMzYuMzctLjg2LjU5LTEuNDEuNTloLTItNC04YzAtMi4yMSAxLjc5LTQgNC00aDcuNDl6IiBmaWxsPSIjZmNkNzcwIi8+PC9nPjxnPjxwYXRoIGQ9Im0zMi40OSA4aC03LjQ5Yy0yLjIxIDAtNCAxLjc5LTQgNGgtNi00di0xYzAtNC45NyA0LjAzLTkgOS05aDRjMy45MiAwIDcuMjUgMi41IDguNDkgNnoiIGZpbGw9IiNmZmVhYTciLz48L2c+PGc+PHBhdGggZD0ibTExIDE5di03aDR2NGgtMWMtMS42NiAwLTMgMS4zNC0zIDN6IiBmaWxsPSIjNjU2ZDc4Ii8+PC9nPjxnPjxwYXRoIGQ9Im0zMyAxMnY3YzAtLjgzLS4zNC0xLjU4LS44OC0yLjEycy0xLjI5LS44OC0yLjEyLS44OGgtMXYtNHoiIGZpbGw9IiM2NTZkNzgiLz48L2c+PGc+PHBhdGggZD0ibTMyLjEyIDE2Ljg4Yy41NC41NC44OCAxLjI5Ljg4IDIuMTIgMCAxLjY2LTEuMzQgMy0zIDNoLTEuNzljLjUxLTEuMTIuNzktMi40Ny43OS00di0yaDFjLjgzIDAgMS41OC4zNCAyLjEyLjg4eiIgZmlsbD0iI2YwZDBiNCIvPjwvZz48Zz48cGF0aCBkPSJtMjkgMTZ2MmMwIDEuNTMtLjI4IDIuODgtLjc5IDQtLjY4IDEuNTMtMS43OCAyLjY2LTMuMTQgMy4zMS0uOTEuNDYtMS45NS42OS0zLjA3LjY5cy0yLjE2LS4yMy0zLjA3LS42OWMtLjczLS4zNC0xLjM4LS44My0xLjkzLTEuNDMtLjQ4LS41My0uODktMS4xNi0xLjIxLTEuODgtLjUxLTEuMTItLjc5LTIuNDctLjc5LTR2LTItNGg2IDh6IiBmaWxsPSIjZjBkMGI0Ii8+PC9nPjxnPjxwYXRoIGQ9Im0xNS43OSAyMmgtMS43OWMtLjgzIDAtMS41OC0uMzQtMi4xMi0uODhzLS44OC0xLjI5LS44OC0yLjEyYzAtMS42NiAxLjM0LTMgMy0zaDF2MmMwIDEuNTMuMjggMi44OC43OSA0eiIgZmlsbD0iI2YwZDBiNCIvPjwvZz48Zz48cGF0aCBkPSJtMjUuMDcgMjUuMzEuOTMgMy42OS00IDMtNC0zIC45My0zLjY5Yy45MS40NiAxLjk1LjY5IDMuMDcuNjlzMi4xNi0uMjMgMy4wNy0uNjl6IiBmaWxsPSIjZjBkMGI0Ii8+PC9nPjxnPjxwYXRoIGQ9Im0yMCA0NmMxLjY2IDAgMyAxLjM0IDMgMyAwIC44My0uMzQgMS41OC0uODggMi4xMnMtMS4yOS44OC0yLjEyLjg4aC0zdi02eiIgZmlsbD0iI2YwZDBiNCIvPjwvZz48Zz48cGF0aCBkPSJtNDguMTYgMjkuNjIgNS4yNyAzLjY1LTIuMzQgMy4zOC0uMDItLjAyLTUuMDctMy42My0uMTQtLjA5eiIgZmlsbD0iI2YwZDBiNCIvPjwvZz48Zz48cGF0aCBkPSJtNTMuNDMgMzMuMjctNS4yNy0zLjY1LTEuNzktMS4yNGMtLjcxLjM4LTEuNTEuNjItMi4zNy42Mi0yLjc2IDAtNS0yLjI0LTUtNSAwLS4yMS4wNC0uNC4wNi0uNmwxLjggMS4yNWMuMzQuMjMuNzMuMzUgMS4xNC4zNS42NSAwIDEuMjctLjMyIDEuNjQtLjg2LjYzLS45MS40LTIuMTYtLjUtMi43OGwtMi4wNC0xLjQyYy44Mi0uNTggMS44MS0uOTQgMi45LS45NCAyLjc2IDAgNSAyLjI0IDUgNSAwIC40Mi0uMDcuODMtLjE3IDEuMjJsMTAuMzEgNy4xNGMuOS42MiAxLjEzIDEuODcuNSAyLjc4LS4zNy41NC0uOTguODYtMS42NC44Ni0uNDEgMC0uOC0uMTItMS4xNC0uMzZ6IiBmaWxsPSIjY2NkMWQ5Ii8+PC9nPjwvZz48Zz48Y2lyY2xlIGN4PSIyNSIgY3k9IjE2IiByPSIxIi8+PGNpcmNsZSBjeD0iMTkiIGN5PSIxNiIgcj0iMSIvPjxwYXRoIGQ9Im0yMiAyM2MyLjIwNiAwIDQtMS43OTQgNC00aC0yYzAgMS4xMDMtLjg5NyAyLTIgMnMtMi0uODk3LTItMmgtMmMwIDIuMjA2IDEuNzk0IDQgNCA0eiIvPjxwYXRoIGQ9Im01OS43MDggMzEuNTMzLTkuNzY3LTYuNzYxYy4wMzktLjI2Ni4wNTktLjUyMi4wNTktLjc3MiAwLTMuMzA5LTIuNjkxLTYtNi02LTEuMjUgMC0yLjQ1NS4zOTEtMy40ODYgMS4xMzEtLjI2NS4xODktLjQyLjQ5Ni0uNDE3LjgyMXMuMTYzLjYyOC40MzEuODEzbDIuMDQxIDEuNDEzYy40NTMuMzE0LjU2Ny45MzguMjU0IDEuMzkxLS4zMDQuNDM4LS45NTIuNTU4LTEuMzkyLjI1NGwtMS44MDEtMS4yNDdjLS4yODgtLjE5OS0uNjU5LS4yMzQtLjk3OS0uMDktLjMxOS4xNDMtLjU0MS40NDMtLjU4My43OWwtLjAxOC4xMzJjLS4wMjcuMTk1LS4wNS4zOS0uMDUuNTkyIDAgMy4zMDkgMi42OTEgNiA2IDYgLjc3NyAwIDEuNTQtLjE1NyAyLjI3NC0uNDY4bC40OTMuMzQxLTQuMDE0IDUuNzM0LTYuNzM5LTQuNzE4Yy0xLjcyNS0xLjIwNy0zLjczOC0yLjAwMy01LjgyMy0yLjMwMmwtMy4zODQtLjQ4Mi0uNTc5LTIuMzEzYzEuMDU5LS42ODIgMS45MzQtMS42MjkgMi41NzMtMi43OTNoMS4xOTljMi4yMDYgMCA0LTEuNzk0IDQtNHYtNmgxYzEuNjU0IDAgMy0xLjM0NiAzLTNzLTEuMzQ2LTMtMy0zaC0xLjgzMmMtMS41NzktMy42MTUtNS4xNzgtNS45OTktOS4xNjgtNS45OTloLTRjLTUuNTE0IDAtMTAgNC40ODYtMTAgMTB2MSAxIDZjMCAyLjIwNiAxLjc5NCA0IDQgNGgxLjE5OGMuNjM4IDEuMTYzIDEuNTEzIDIuMTExIDIuNTczIDIuNzkzbC0uNTc5IDIuMzEzLTQuMjA5LjYwMWMtMS41MzcuMjIxLTMuMDMyLjc5MS00LjMyNCAxLjY1Mi0yLjkxNyAxLjk0NC00LjY1OSA1LjE5OS00LjY1OSA4LjcwNXY4LjkzNmMwIDIuNzU3IDIuMjQzIDUgNSA1aDF2MTBoMjR2LTIxLjQ2MWw2LjUzOSAyLjkwNWMuODI2LjM2OSAxLjcwNi41NTYgMi42MTQuNTU2IDIuMTEgMCA0LjA4OC0xLjAzNiA1LjI4OS0yLjc3MWw1LjI0LTcuNTY4IDIuNjEgMS44MDdjLjUwNi4zNDcgMS4wOTYuNTMyIDEuNzA3LjUzMi45ODMgMCAxLjkwNi0uNDgyIDIuNDY4LTEuMjkyLjk0MS0xLjM1OS42MDEtMy4yMzItLjc1OS00LjE3NXptLTM5LjIzLjU3NS0yLjQ3OCAyLjQ3OHYtNC4zMzZ6bTEuNTIyIDEuMzA2IDIuNTg2IDIuNTg2aC01LjE3MnptNC0zLjE2NHY0LjMzNmwtMi40NzgtMi40Nzh6bTQtOS4yNWgtLjM5NWMuMjU0LS45MjQuMzk1LTEuOTI3LjM5NS0zdi0xYzEuMTAzIDAgMiAuODk3IDIgMnMtLjg5NyAyLTIgMnptMi01LjQ0NGMtLjU5MS0uMzQ0LTEuMjY4LS41NTYtMi0uNTU2di0yaDJ6bTMtNi41NTZjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFoLTEyLjgyOWMuNDEzLTEuMTY0IDEuNTI1LTIgMi44MjktMnptLTE1LTZoNGMyLjg4OSAwIDUuNTIgMS41NjEgNi45MzEgNGgtNS45MzFjLTIuNDE1IDAtNC40MzUgMS43MjEtNC44OTkgNGgtOC4xMDFjMC00LjQxMSAzLjU4OS04IDgtOHptLTYgMTB2MmMtLjczMiAwLTEuNDA5LjIxMi0yIC41NTZ2LTIuNTU2em0wIDhjLTEuMTAzIDAtMi0uODk3LTItMnMuODk3LTIgMi0ydjFjMCAxLjA3My4xNDEgMi4wNzYuMzk1IDN6bTItM3YtNWgxMnY1YzAgNC4yNTItMi4zNTUgNy02IDdzLTYtMi43NDgtNi03em02IDljLjg0NCAwIDEuNjQtLjEyMyAyLjM4My0uMzQ5bC40ODYgMS45NDgtMi44NjkgMi4xNTEtMi44NjktMi4xNTEuNDg2LTEuOTQ4Yy43NDMuMjI2IDEuNTM5LjM0OSAyLjM4My4zNDl6bS04LjczMyAzLjY4NyAyLjczMy0uMzkxdjcuNzA0aDEydi03LjcwNGwxLjkwOC4yNzNjLjcxMy4xMDIgMS40MS4yOSAyLjA5Mi41MjR2MjMuOTA3aC0ydi0xNWgtMTZ2NWgtMnYtMTQuMDE4Yy40MTYtLjEyNy44MzctLjIzNCAxLjI2Ny0uMjk1em0yLjczMyAyNi4zMTN2LTRoNGMyLjIwNiAwIDQtMS43OTQgNC00cy0xLjc5NC00LTQtNGgtNHYtM2gxMnYxNXptNC0xMGMxLjEwMyAwIDIgLjg5NyAyIDJzLS44OTcgMi0yIDJoLTJ2LTR6bS0xNCAxdi04LjkzNmMwLTIuODM3IDEuNDA5LTUuNDY5IDMuNzY5LTcuMDQyLjA3NC0uMDUuMTU1LS4wODkuMjMxLS4xMzZ2MTMuMTE0IDEgMWg2djRoLTdjLTEuNjU0IDAtMy0xLjM0Ni0zLTN6bTggNXYyaC0ydi0yem0tMiA0aDJ2Mmg3djJoLTl6bTExIDR2LTJoN3YtMmgydjR6bTIzLjc5OC0xOS45MWMtLjgyOCAxLjE5Ni0yLjE5MSAxLjkxLTMuNjQ1IDEuOTEtLjYyNiAwLTEuMjMxLS4xMjktMS44MDEtLjM4M2wtNy4zNTItMy4yNjd2LTcuMzU2Yy4yOTUuMTY5LjU5LjMzOS44NjguNTM0bDguMzc4IDUuODY0IDIuODYxLTQuMDg3IDMuNjA0IDIuNTc3em00LjA1MS01Ljg1Mi0zLjU5Ni0yLjU3MSAxLjE1OC0xLjY1NSAzLjYyNiAyLjUxem03Ljk3NC0uNjdjLS4zMDQuNDM4LS45NTIuNTU4LTEuMzkyLjI1NGwtMTAuNDk2LTcuMjY2Yy0uMTcxLS4xMTgtLjM3LS4xNzgtLjU2OS0uMTc4LS4xNjQgMC0uMzI4LjA0LS40NzguMTIxLS42MS4zMzMtMS4yNDUuNTAxLTEuODg4LjUwMS0xLjY5MiAwLTMuMTQzLTEuMDU3LTMuNzI3LTIuNTQ1bC4wMTkuMDEzYzEuMzE3LjkwOSAzLjI2NC41NTUgNC4xNzQtLjc1OS45NDEtMS4zNTkuNjAyLTMuMjMyLS43NTktNC4xNzVsLS42MTctLjQyN2MuMjk3LS4wNzEuNjAxLS4xMDcuOTEtLjEwNyAyLjIwNiAwIDQgMS43OTQgNCA0IDAgLjI5Ni0uMDQ0LjYwNS0uMTM4Ljk3NS0uMTAzLjQwNS4wNTguODMxLjQgMS4wNjhsMTAuMzA3IDcuMTM1Yy4yMTkuMTUxLjM2Ni4zOC40MTQuNjQ0cy0uMDA5LjUyOS0uMTYuNzQ2eiIvPjwvZz48L2c+PC9zdmc+"
+                width="80px" height="80px" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#SEC-2">nos services</a></li>
+                <li><a href="#SEC-5">services populaires</a></li>
+                <li><a href="#SEC-7">a propos</a></li>
+                <li><a href="#SEC-8">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="SEC-1">
+            <div id="Text" data-aos="fade-down" data-aos-delay="200">
+                <h1>Réparation à
+                    domicile</h1>
+                <h2>& Rénover</h2>
+                <p>Velit reprehenderit dolor id sunt proident voluptate Lorem laborum commodo eu et. Pariatur eiusmod do
+                    ea esse eu ullamco nisi nisi Lorem sint. Culpa reprehenderit duis duis anim sint veniam. Do sint
+                    nostrud qui voluptate aliquip excepteur nulla pariatur ut mollit. Fugiat elit quis voluptate elit ut
+                    nostrud occaecat velit amet labore enim sunt.
+                    Sunt aliquip amet veniam nisi labore sunt nostrud occaecat am.</p>
+                <div id="btn">
+                    <button>Lire La Suit</button>
+                </div>
+            </div>
+            <div id="Pic" data-aos="flip-left" data-aos-delay="500">
+                <div id="ph1"></div>
+                <div id="ph2"></div>
+            </div>
+        </section>
+        <section id="SEC-2">
+            <article class="ART" id="ART-1" data-aos="flip-left" data-aos-delay="300" data-aos-once="true">
+                <div class="SHAPE-CIRC">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDgwIDQ4MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDgwIDQ4MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MTYsMzM2aC0xMi41MjhjLTguNzg2LDAuMDA4LTE3LjQ1LDIuMDUzLTI1LjMxMiw1Ljk3NmMtMTEuNDM5LDUuNjg2LTI0Ljg4MSw1LjY4Ni0zNi4zMiwwDQoJCQljLTQuNTYzLTIuMjM5LTkuNDA2LTMuODU0LTE0LjQtNC44TDM0My4wMzIsMjE2SDM2MGM0LjQxOCwwLDgtMy41ODIsOC04di0zMmMwLTQuNDE4LTMuNTgyLTgtOC04aC0zMnYtMjQNCgkJCWMwLTIuMTIyLTAuODQ0LTQuMTU2LTIuMzQ0LTUuNjU2TDI4OCwxMDAuNjg4Vjc1Ljg0bDEyLjEyOC05LjY5NmwyMC43MTIsNDEuNDMybDE0LjMyLTcuMTUyTDMxMi45MDQsNTUuOTJMMzIyLjgsNDhIMzUyDQoJCQljNC40MTgsMCw4LTMuNTgyLDgtOFY4YzAtNC40MTgtMy41ODItOC04LThoLTgwYy0zOS43NDQsMC4wNDgtNzEuOTUyLDMyLjI1Ni03Miw3MmMwLDQuNDE4LDMuNTgyLDgsOCw4aDE2djIwLjY4OGwtMjEuNjU2LDIxLjY1Ng0KCQkJYy0xLjUsMS41LTIuMzQ0LDMuNTM0LTIuMzQ0LDUuNjU2djQwaC0xNnYtNjRjLTAuMDEyLTAuOTkxLTAuMjEtMS45Ny0wLjU4NC0yLjg4OGMtMC4xNDYtMC4zMTEtMC4zMTItMC42MTMtMC40OTYtMC45MDQNCgkJCWMtMC4xOTItMC40MTktMC40MTctMC44MjMtMC42NzItMS4yMDhMMTUyLDYxLjJWOGMwLTQuNDE4LTMuNTgyLTgtOC04SDk2Yy00LjQxOCwwLTgsMy41ODItOCw4djUzLjJMNTcuNzUyLDk5DQoJCQljLTAuMjU1LDAuMzg1LTAuNDgsMC43ODktMC42NzIsMS4yMDhjLTAuMTg0LDAuMjkxLTAuMzUsMC41OTMtMC40OTYsMC45MDRDNTYuMjEsMTAyLjAzLDU2LjAxMiwxMDMuMDA5LDU2LDEwNHY2NEgyNA0KCQkJYy00LjQxOCwwLTgsMy41ODItOCw4djMyYzAsNC40MTgsMy41ODIsOCw4LDhoMTYuOTY4bDMxLjA5NiwyNDEuMDI0YzAuNTE1LDMuOTksMy45MTMsNi45NzcsNy45MzYsNi45NzZoMTg4LjMyDQoJCQljOS4wNzMsMTAuMTcsMjIuMDUxLDE1Ljk5LDM1LjY4LDE2aDEyLjUyOGM4Ljc4Ni0wLjAwOCwxNy40NS0yLjA1MywyNS4zMTItNS45NzZjMTEuNDM5LTUuNjg2LDI0Ljg4MS01LjY4NiwzNi4zMiwwDQoJCQljNy44NjIsMy45MjMsMTYuNTI2LDUuOTY4LDI1LjMxMiw1Ljk3Nkg0MTZjMjYuNDk5LTAuMDI2LDQ3Ljk3NC0yMS41MDEsNDgtNDh2LTQ4QzQ2My45NzQsMzU3LjUwMSw0NDIuNDk5LDMzNi4wMjYsNDE2LDMzNnoNCgkJCSBNMzI4LDE2aDE2djE2aC0xNlYxNnogTTM1MiwxODR2MTZIMjQwdi0xNkgzNTJ6IE0yMTYuNTY4LDY0YzQuMDEzLTI3LjUzNSwyNy42MDYtNDcuOTY1LDU1LjQzMi00OGg0MHYyMC4xNkwyNzcuMTkyLDY0SDIxNi41Njh6DQoJCQkgTTI3Miw4MHYxNmgtMzJWODBIMjcyeiBNMjE2LDEzMS4zMTJMMjM1LjMxMiwxMTJoNDEuMzc2TDMxMiwxNDcuMzEyVjE2OGgtOTZWMTMxLjMxMnogTTIwOCwxODRoMTZ2NTYNCgkJCWMtMC4wMTcsMy4wNDcsMS42OTksNS44MzgsNC40MjQsNy4ybDQ4LDI0YzIuMzQxLDEuMTU0LDQuMTE1LDMuMjA1LDQuOTIsNS42ODhjMC44MjksMi42NjUsMC41NDEsNS41NTItMC44LDgNCgkJCWMtMi4zMDIsNC42MTktNy45MTIsNi40OTctMTIuNTMxLDQuMTk0Yy0wLjAwNy0wLjAwMy0wLjAxNC0wLjAwNy0wLjAyMS0wLjAxbC0zMi40OC0xNi4yNGMtMy45Ny0xLjk0LTguNzYtMC4yOTQtMTAuNywzLjY3Ng0KCQkJYy0wLjUzMSwxLjA4OC0wLjgwOSwyLjI4Mi0wLjgxMiwzLjQ5MnY4MGMwLDguODM3LTcuMTYzLDE2LTE2LDE2di03MmgtMTZ2NzJoLTE2di03MmgtMTZ2NzJoLTE2di03MmgtMTZ2NzINCgkJCWMtOC44MzcsMC0xNi03LjE2My0xNi0xNlYxODRIMjA4eiBNMTA0LDE2aDMydjQwaC0zMlYxNnogTTk5Ljg0LDcyaDQwLjMybDE5LjIsMjRIODAuNjRMOTkuODQsNzJ6IE03MiwxMTJoOTZ2NTZINzJWMTEyeiBNMzIsMjAwDQoJCQl2LTE2aDY0djE2SDMyeiBNMjU2LDM4NHY0OGMwLjAxNCw1LjQ1NCwwLjk2MSwxMC44NjUsMi44LDE2SDg3LjAzMkw1Ny4wOTYsMjE2SDk2djE0NGMwLDE3LjY3MywxNC4zMjcsMzIsMzIsMzJoODANCgkJCWMxNy42NzMsMCwzMi0xNC4zMjcsMzItMzJ2LTY3LjA1NmwyMC44OTYsMTAuNDQ4YzEyLjYyNyw2LjIzMiwyNy45MTUsMS4wNDgsMzQuMTQ3LTExLjU3OWMwLjAyNi0wLjA1MiwwLjA1MS0wLjEwNSwwLjA3Ny0wLjE1Nw0KCQkJYzMuMDk5LTYuMTQzLDMuNjI2LTEzLjI2OCwxLjQ2NC0xOS44Yy0yLjEzMi02LjUzNS02LjgwMi0xMS45MzctMTIuOTYtMTQuOTkyTDI0MCwyMzUuMDU2VjIxNmg4Ni45MDRsLTE1LjQ4OCwxMjBIMzA0DQoJCQlDMjc3LjUwMSwzMzYuMDI2LDI1Ni4wMjYsMzU3LjUwMSwyNTYsMzg0eiBNNDQ4LDQzMmMwLDE3LjY3My0xNC4zMjcsMzItMzIsMzJoLTEyLjUyOGMtNi4zMDEtMC4wMDktMTIuNTE0LTEuNDc2LTE4LjE1Mi00LjI4OA0KCQkJYy0xNS45NS03LjkyNS0zNC42OS03LjkyNS01MC42NCwwYy01LjYzOCwyLjgxMi0xMS44NTEsNC4yNzktMTguMTUyLDQuMjg4SDMwNGMtMTcuNjczLDAtMzItMTQuMzI3LTMyLTMydi0xMi4zMg0KCQkJYzguNzczLDcuOTI3LDIwLjE3NiwxMi4zMTcsMzIsMTIuMzJoMTIuNTI4YzguNzg2LTAuMDA4LDE3LjQ1LTIuMDUzLDI1LjMxMi01Ljk3NmMxMS40MzktNS42ODYsMjQuODgxLTUuNjg2LDM2LjMyLDANCgkJCWM3Ljg2MiwzLjkyMywxNi41MjYsNS45NjgsMjUuMzEyLDUuOTc2SDQxNmMxMS44MjQtMC4wMDMsMjMuMjI3LTQuMzkzLDMyLTEyLjMyVjQzMnogTTQxNiw0MTZoLTEyLjUyOA0KCQkJYy02LjMwMS0wLjAwOS0xMi41MTQtMS40NzYtMTguMTUyLTQuMjg4Yy0xNS45NS03LjkyNS0zNC42OS03LjkyNS01MC42NCwwYy01LjYzOCwyLjgxMi0xMS44NTEsNC4yNzktMTguMTUyLDQuMjg4SDMwNA0KCQkJYy0xNy42NzMsMC0zMi0xNC4zMjctMzItMzJjMC0xNy42NzMsMTQuMzI3LTMyLDMyLTMyaDEyLjUyOGM2LjMwMSwwLjAwOSwxMi41MTQsMS40NzYsMTguMTUyLDQuMjg4DQoJCQljMTUuOTUxLDcuOTIsMzQuNjg5LDcuOTIsNTAuNjQsMGM1LjYzOC0yLjgxMiwxMS44NTEtNC4yNzksMTguMTUyLTQuMjg4SDQxNmMxNy42NzMsMCwzMiwxNC4zMjcsMzIsMzINCgkJCUM0NDgsNDAxLjY3Myw0MzMuNjczLDQxNiw0MTYsNDE2eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cmVjdCB4PSI0MDgiIHk9IjM2OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjMyOCIgeT0iMzY4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHJlY3QgeD0iMjk2IiB5PSIzNzYiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cmVjdCB4PSIzNzYiIHk9IjM3NiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo="
+                        width="90px" height="90px" />
+                </div>
+                <div class="TXT-1">
+                    <h1>Nettyage A Domécile</h1>
+                </div>
+                <div class="TXT-2">
+                    <p>Aliquip officia commodo veniam irure officia velit ut deserunt velit aute. Id proident est sint
+                        deserunt ex pariatur. Lorem proident in qui adipisicing officia magna non ad officia. Sint
+                        consequat id et laborum .</p>
+                </div>
+            </article>
+            <article class="ART" id="ART-4" data-aos="flip-down" data-aos-delay="400" data-aos-once="true">
+                <div class="SHAPE-CIRC">
+                    <img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxnPjxwYXRoIGQ9Ik00NzIsMTA0SDQ1NlY4OGE4LDgsMCwwLDAtOC04SDQzMlY2NGE4LDgsMCwwLDAtOC04SDQwYTgsOCwwLDAsMC04LDhWODBIMTZhOCw4LDAsMCwwLTgsOHY0OGE4LDgsMCwwLDAsOCw4SDMydjE2YTgsOCwwLDAsMCw4LDhINTZ2NTZhMjQuMDA2LDI0LjAwNiwwLDAsMCwzMiwyMi42M1YyNzJhMjQsMjQsMCwwLDAsNDgsMFYyMDYuNjNBMjQuMDA2LDI0LjAwNiwwLDAsMCwxNjgsMTg0VjE2OEg0MjRhOCw4LDAsMCwwLDgtOFYxNDRoMTZhOCw4LDAsMCwwLDgtOFYxMjBoMTZhMTYuMDIxLDE2LjAyMSwwLDAsMSwxNiwxNnY2NGExNi4wMjEsMTYuMDIxLDAsMCwxLTE2LDE2SDI1NmE4LDgsMCwwLDAtOCw4djMyaC04YTgsOCwwLDAsMC04LDh2MTZhOCw4LDAsMCwwLTgsOFY0ODBhMjQuMDMyLDI0LjAzMiwwLDAsMCwyNCwyNGgxNmEyNC4wMzIsMjQuMDMyLDAsMCwwLDI0LTI0VjI4OGE4LDgsMCwwLDAtOC04VjI2NGE4LDgsMCwwLDAtOC04aC04VjIzMkg0NzJhMzIuMDM2LDMyLjAzNiwwLDAsMCwzMi0zMlYxMzZBMzIuMDM2LDMyLjAzNiwwLDAsMCw0NzIsMTA0Wk0zMiwxMjhIMjRWOTZoOFptMzg0LDI0SDE2MGE4LDgsMCwwLDAtOCw4djI0YTgsOCwwLDAsMS0xNiwwLDgsOCwwLDAsMC0xNiwwdjg4YTgsOCwwLDAsMS0xNiwwVjIyNGE4LDgsMCwwLDAtMTYsMCw4LDgsMCwwLDEtMTYsMFYxNjBhOCw4LDAsMCwwLTgtOEg0OFY3Mkg0MTZabTI0LTI0aC04Vjk2aDhaTTI0OCwyNzJoMTZ2OEgyNDhabTI0LDI0VjQ4MGE4LjAxMSw4LjAxMSwwLDAsMS04LDhIMjQ4YTguMDExLDguMDExLDAsMCwxLTgtOFYyOTZaIi8+PHBhdGggZD0iTTk2LDE1MmE4LDgsMCwwLDAtOCw4djQwYTgsOCwwLDAsMCwxNiwwVjE2MEE4LDgsMCwwLDAsOTYsMTUyWiIvPjxwYXRoIGQ9Ik0xMjgsMTQ0YTgsOCwwLDAsMC04LDh2OGE4LDgsMCwwLDAsMTYsMHYtOEE4LDgsMCwwLDAsMTI4LDE0NFoiLz48L2c+PC9zdmc+Cg==" />
+                </div>
+                <div class="TXT-1">
+                    <h1>Peinture Intérieur</h1>
+                </div>
+                <div class="TXT-2">
+                    <p>Aliquip officia commodo veniam irure officia velit ut deserunt velit aute. Id proident est sint
+                        deserunt ex pariatur. Lorem proident in qui adipisicing officia magna non ad officia. Sint
+                        consequat id et laborum .</p>
+                </div>
+            </article>
+            <article class="ART" id="ART-3" data-aos="flip-left" data-aos-delay="500" data-aos-once="true">
+                <div class="SHAPE-CIRC"><img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGcgaWQ9Im91dGxpbmUiPjxwYXRoIGQ9Ik00NjkuNDI2LDIxMC4xMjJsLTIwOC0xOTJhOCw4LDAsMCwwLTEwLjg1MiwwbC0yMDgsMTkyQTgsOCwwLDAsMCw0MCwyMTZWNDg4YTgsOCwwLDAsMCw4LDhINDY0YTgsOCwwLDAsMCw4LThWMjE2QTgsOCwwLDAsMCw0NjkuNDI2LDIxMC4xMjJaTTI2Ni4zNDMsMTczLjY1N2w0LjEyNiw0LjEyNmEyMy4zMywyMy4zMywwLDAsMSw2LjM5MywyMS4xMTQsMjEuMjc1LDIxLjI3NSwwLDAsMS00MS43MjQsMCwyMy4zMjksMjMuMzI5LDAsMCwxLDYuMzkzLTIxLjExM2w0LjEyNi00LjEyNkE4LDgsMCwwLDAsMjQ4LDE2OHYtOGgxNnY4QTgsOCwwLDAsMCwyNjYuMzQzLDE3My42NTdaTTIxNiwxNDRsNDAtMzAsNDAsMzBaTTExMiw0ODBWMzc4LjQyMmw4LTEyLDgsMTJWNDgwWm0xNDQsMFYzODRoOGE4LDgsMCwwLDAsMC0xNkgyNDhhOCw4LDAsMCwwLTgsOFY0ODBIMjI0VjM3NmE4LDgsMCwwLDAtMi4zNDMtNS42NTdMMTkyLDM0MC42ODdWMjk4LjIxNkwyMTIuNTI5LDI2NEgyMjR2NDhhOCw4LDAsMCwwLDMuNTYyLDYuNjU2bDI0LDE2YTgsOCwwLDAsMCw4Ljg3NiwwbDI0LTE2QTgsOCwwLDAsMCwyODgsMzEyVjI2NGgxMmwyMCwyNi42Njd2NTAuMDJsLTI5LjY1NywyOS42NTZBOCw4LDAsMCwwLDI4OCwzNzZWNDgwWm0xMjgsMFY0MTZhNy45OTQsNy45OTQsMCwwLDAtLjg0NS0zLjU3OGwtNi44MzctMTMuNjczTDM3OC43NzcsMzg0aDI2LjQ0NmwyLjQ1OSwxNC43NDktNi44MzcsMTMuNjczQTcuOTk0LDcuOTk0LDAsMCwwLDQwMCw0MTZ2NjRabS0yLjU1Ni0xMTIsMS4zMzMtOGgxOC40NDZsMS4zMzMsOFpNNDU2LDQ4MEg0MTZWNDE3Ljg4OWw3LjE1NS0xNC4zMTFhOC4wMDksOC4wMDksMCwwLDAsLjczNy00Ljg5M2wtOC00OEE4LDgsMCwwLDAsNDA4LDM0NEgzNzZhOCw4LDAsMCwwLTcuODkyLDYuNjg1bC04LDQ4YTguMDA5LDguMDA5LDAsMCwwLC43MzcsNC44OTNMMzY4LDQxNy44ODlWNDgwSDMwNFYzNzkuMzEzbDI5LjY1Ny0yOS42NTZBOCw4LDAsMCwwLDMzNiwzNDRWMjg4YTgsOCwwLDAsMC0xLjYtNC44bC0yNC0zMkE4LDgsMCwwLDAsMzA0LDI0OEgyODBhOCw4LDAsMCwwLTgsOHY1MS43MTlsLTE2LDEwLjY2Ni0xNi0xMC42NjZWMjU2YTgsOCwwLDAsMC04LThIMjA4YTgsOCwwLDAsMC02Ljg2LDMuODg0bC0yNCw0MEE4LjAwOSw4LjAwOSwwLDAsMCwxNzYsMjk2djQ4YTgsOCwwLDAsMCwyLjM0Myw1LjY1N0wyMDgsMzc5LjMxM1Y0ODBIMTQ0VjM3NmE4LDgsMCwwLDAtMS4zNDQtNC40MzhsLTE2LTI0YTgsOCwwLDAsMC0xMy4zMTIsMGwtMTYsMjRBOCw4LDAsMCwwLDk2LDM3NlY0ODBINTZWMjE5LjVMMjQ4LDQyLjI3MlYxMDBsLTYwLjgsNDUuNkE4LDgsMCwwLDAsMTkyLDE2MGg0MHY0LjY4NmwtMS43ODMsMS43ODNhMzkuMywzOS4zLDAsMCwwLTEwLjc2OSwzNS41NjcsMzcuMjc2LDM3LjI3NiwwLDAsMCw3My4xLDAsMzkuMywzOS4zLDAsMCwwLTEwLjc2OS0zNS41NjZMMjgwLDE2NC42ODdWMTYwaDQwYTgsOCwwLDAsMCw0LjgtMTQuNEwyNjQsMTAwVjQyLjI3Mkw0NTYsMjE5LjVaIi8+PC9nPjwvc3ZnPgo=" />
+                </div>
+                <div class="TXT-1">
+                    <h1>Light Fixtures</h1>
+                </div>
+                <div class="TXT-2">
+                    <p>Aliquip officia commodo veniam irure officia velit ut deserunt velit aute. Id proident est sint
+                        deserunt ex pariatur. Lorem proident in qui adipisicing officia magna non ad officia. Sint
+                        consequat id et laborum .</p>
+                </div>
+            </article>
+            <article class="ART" id="ART-4" data-aos="flip-up" data-aos-delay="600" data-aos-once="true">
+                <div class="SHAPE-CIRC">
+                    <img
+                        src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSItNDIgMCA1MTIgNTEyLjAwMDUxIiB3aWR0aD0iNTEycHQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTI1Ny44OTA2MjUgMjIzLjU3MDMxMmgtODcuODA4NTk0Yy00LjE3NTc4MSAwLTcuNTYyNSAzLjM4NjcxOS03LjU2MjUgNy41NjY0MDd2ODcuODA0Njg3YzAgNC4xNzk2ODggMy4zODY3MTkgNy41NjI1IDcuNTYyNSA3LjU2MjVoODcuODA4NTk0YzQuMTc1NzgxIDAgNy41NjI1LTMuMzgyODEyIDcuNTYyNS03LjU2MjV2LTIxLjQwMjM0NGMwLTQuMTc1NzgxLTMuMzg2NzE5LTcuNTYyNS03LjU2MjUtNy41NjI1LTQuMTc5Njg3IDAtNy41NjY0MDYgMy4zODY3MTktNy41NjY0MDYgNy41NjI1djEzLjgzOTg0NGgtNzIuNjc5Njg4di03Mi42Nzk2ODdoNzIuNjc5Njg4djI4LjU4OTg0M2MwIDQuMTc1NzgyIDMuMzg2NzE5IDcuNTYyNSA3LjU2NjQwNiA3LjU2MjUgNC4xNzU3ODEgMCA3LjU2MjUtMy4zODY3MTggNy41NjI1LTcuNTYyNXYtMzYuMTUyMzQzYzAtNC4xNzk2ODgtMy4zODY3MTktNy41NjY0MDctNy41NjI1LTcuNTY2NDA3em0wIDAiLz48cGF0aCBkPSJtMTAxLjQ0MTQwNiAyMjQuMTk1MzEyYzAgNC4xNzk2ODggMy4zODI4MTMgNy41NjI1IDcuNTYyNSA3LjU2MjVoMjMuNTgyMDMydjE4Ljc2OTUzMmgtMjMuNTgyMDMyYy00LjE3OTY4NyAwLTcuNTYyNSAzLjM4NjcxOC03LjU2MjUgNy41NjI1IDAgNC4xNzk2ODcgMy4zODI4MTMgNy41NjI1IDcuNTYyNSA3LjU2MjVoMjMuNTgyMDMydjE4Ljc2OTUzMWgtMjMuNTgyMDMyYy00LjE3OTY4NyAwLTcuNTYyNSAzLjM4NjcxOS03LjU2MjUgNy41NjI1IDAgNC4xNzk2ODcgMy4zODI4MTMgNy41NjI1IDcuNTYyNSA3LjU2MjVoMjMuNTgyMDMydjE4Ljc2OTUzMWgtMjMuNTgyMDMyYy00LjE3OTY4NyAwLTcuNTYyNSAzLjM4NjcxOS03LjU2MjUgNy41NjI1IDAgNC4xNzk2ODggMy4zODI4MTMgNy41NjI1IDcuNTYyNSA3LjU2MjVoMjMuNTgyMDMydjEyLjY4MzU5NGMwIDUuNjg3NSA0LjYyNSAxMC4zMTI1IDEwLjMxMjUgMTAuMzEyNWgxMi42ODM1OTN2MjMuNTgyMDMxYzAgNC4xNzU3ODEgMy4zODI4MTMgNy41NjI1IDcuNTYyNSA3LjU2MjUgNC4xNzU3ODEgMCA3LjU2MjUtMy4zODY3MTkgNy41NjI1LTcuNTYyNXYtMjMuNTgyMDMxaDE4Ljc2OTUzMXYyMy41ODIwMzFjMCA0LjE3NTc4MSAzLjM4MjgxMyA3LjU2MjUgNy41NjI1IDcuNTYyNSA0LjE3NTc4MiAwIDcuNTYyNS0zLjM4NjcxOSA3LjU2MjUtNy41NjI1di0yMy41ODIwMzFoMTguNzY1NjI2djIzLjU4MjAzMWMwIDQuMTc1NzgxIDMuMzg2NzE4IDcuNTYyNSA3LjU2NjQwNiA3LjU2MjUgNC4xNzU3ODEgMCA3LjU2MjUtMy4zODY3MTkgNy41NjI1LTcuNTYyNXYtMjMuNTgyMDMxaDE4Ljc2OTUzMXYyMy41ODIwMzFjMCA0LjE3NTc4MSAzLjM4MjgxMyA3LjU2MjUgNy41NjI1IDcuNTYyNSA0LjE3NTc4MSAwIDcuNTYyNS0zLjM4NjcxOSA3LjU2MjUtNy41NjI1di0yMy41ODIwMzFoMTIuNjgzNTk0YzUuNjgzNTkzIDAgMTAuMzA4NTkzLTQuNjI1IDEwLjMwODU5My0xMC4zMTI1di0xMi42ODM1OTRoMjMuNTgyMDMyYzQuMTc5Njg3IDAgNy41NjY0MDYtMy4zODI4MTIgNy41NjY0MDYtNy41NjI1IDAtNC4xNzU3ODEtMy4zODY3MTktNy41NjI1LTcuNTY2NDA2LTcuNTYyNWgtMjMuNTgyMDMydi0xOC43Njk1MzFoMjMuNTgyMDMyYzQuMTc5Njg3IDAgNy41NjY0MDYtMy4zODI4MTMgNy41NjY0MDYtNy41NjI1IDAtNC4xNzU3ODEtMy4zODY3MTktNy41NjI1LTcuNTY2NDA2LTcuNTYyNWgtMjMuNTgyMDMydi0xOC43Njk1MzFoMjMuNTgyMDMyYzQuMTc5Njg3IDAgNy41NjY0MDYtMy4zODI4MTMgNy41NjY0MDYtNy41NjI1IDAtNC4xNzU3ODItMy4zODY3MTktNy41NjI1LTcuNTY2NDA2LTcuNTYyNWgtMjMuNTgyMDMydi0xOC43Njk1MzJoMjMuNTgyMDMyYzQuMTc5Njg3IDAgNy41NjY0MDYtMy4zODI4MTIgNy41NjY0MDYtNy41NjI1IDAtNC4xNzU3ODEtMy4zODY3MTktNy41NjI1LTcuNTY2NDA2LTcuNTYyNWgtMjMuNTgyMDMydi0xMi42ODM1OTNjMC01LjY4MzU5NC00LjYyNS0xMC4zMDg1OTQtMTAuMzA4NTkzLTEwLjMwODU5NGgtMTIuNjgzNTk0di0yMy41ODU5MzdjMC00LjE3NTc4Mi0zLjM4NjcxOS03LjU2MjUtNy41NjI1LTcuNTYyNS00LjE3OTY4NyAwLTcuNTYyNSAzLjM4NjcxOC03LjU2MjUgNy41NjI1djIzLjU4NTkzN2gtMTguNzY5NTMxdi0yMy41ODU5MzdjMC00LjE3NTc4Mi0zLjM4NjcxOS03LjU2MjUtNy41NjI1LTcuNTYyNS00LjE3OTY4OCAwLTcuNTY2NDA2IDMuMzg2NzE4LTcuNTY2NDA2IDcuNTYyNXYyMy41ODU5MzdoLTE4Ljc2NTYyNnYtMjMuNTg1OTM3YzAtNC4xNzU3ODItMy4zODY3MTgtNy41NjI1LTcuNTYyNS03LjU2MjUtNC4xNzk2ODcgMC03LjU2MjUgMy4zODY3MTgtNy41NjI1IDcuNTYyNXYyMy41ODU5MzdoLTE4Ljc2OTUzMXYtMjMuNTg1OTM3YzAtNC4xNzU3ODItMy4zODY3MTktNy41NjI1LTcuNTYyNS03LjU2MjUtNC4xNzk2ODcgMC03LjU2MjUgMy4zODY3MTgtNy41NjI1IDcuNTYyNXYyMy41ODU5MzdoLTEyLjY4MzU5M2MtNS42ODc1IDAtMTAuMzEyNSA0LjYyNS0xMC4zMTI1IDEwLjMwODU5NHYxMi42ODM1OTNoLTIzLjU4MjAzMmMtNC4xNzU3ODEgMC03LjU2MjUgMy4zODY3MTktNy41NjI1IDcuNTYyNXptNDYuMjY5NTMyLTE1LjQyOTY4N2gxMzIuNTQ2ODc0djEzMi41NDY4NzVoLTEzMi41NDY4NzR6bTAgMCIvPjxwYXRoIGQ9Im00MTAuMTgzNTk0IDQ1NC44MjAzMTJoLTI2Ljg0Mzc1Yy4xMzI4MTItLjg3NS4yMjY1NjItMS43NjU2MjQuMjI2NTYyLTIuNjc5Njg3di0yMS42MDE1NjNjMC05LjgwODU5My03Ljk4MDQ2OC0xNy43ODkwNjItMTcuNzg5MDYyLTE3Ljc4OTA2MmgtMTYuNDY0ODQ0di0yMTIuNjc1NzgxbDMxLjYyNSAzMS42ODM1OTNjOC42NzE4NzUgOC42NzE4NzYgMjIuNzM0Mzc1IDguNzM4MjgyIDMxLjQ3MjY1NiAwbDUuNTI3MzQ0LTUuNTE1NjI0YzguNjgzNTk0LTguNjgzNTk0IDguNjk5MjE5LTIyLjc2OTUzMiAwLTMxLjQ3MjY1N2wtMTg3LjkwNjI1LTE4OC4yMzgyODFjLTguNjk1MzEyLTguNjk1MzEyLTIyLjg5ODQzOC04LjcyMjY1Ni0zMS42MTcxODggMGwtMTg4LjM3ODkwNiAxODguMjM4MjgxYy00LjIwNzAzMSA0LjIwNzAzMS02LjUxNTYyNSA5Ljc5Mjk2OS02LjUxNTYyNSAxNS43MzA0NjkgMCAxMi41MDc4MTIgOS4zMDg1OTQgMTcuNzg1MTU2IDEyLjAzOTA2MyAyMS4yNTc4MTIgOC42ODc1IDguNjg3NSAyMi43NDYwOTQgOC43MTg3NSAzMS40NzI2NTYuMDExNzE5bDMxLjYyNS0zMS42MDU0Njl2MjEyLjU4NTkzOGgtMTYuNDYwOTM4Yy05LjgwODU5MyAwLTE3Ljc4OTA2MiA3Ljk4MDQ2OS0xNy43ODkwNjIgMTcuNzg5MDYyLjA4NTkzOCAyMi4yMjI2NTctLjE4NzUgMjEuNTc4MTI2LjIyMjY1NiAyNC4yODEyNWgtMjYuODM5ODQ0Yy05LjgwODU5MyAwLTE3Ljc4OTA2MiA3Ljk4MDQ2OS0xNy43ODkwNjIgMTcuNzg5MDYzdjIxLjYwMTU2M2MwIDkuODA4NTkzIDcuOTgwNDY5IDE3Ljc4OTA2MiAxNy43ODkwNjIgMTcuNzg5MDYyaDMxMi42MDkzNzZjNC4xNzU3ODEgMCA3LjU2MjUtMy4zODI4MTIgNy41NjI1LTcuNTYyNXMtMy4zODY3MTktNy41NjI1LTcuNTYyNS03LjU2MjVoLTMxMi42MDkzNzZjLTEuNDY4NzUgMC0yLjY2NDA2Mi0xLjE5NTMxMi0yLjY2NDA2Mi0yLjY2NDA2MnYtMjEuNjAxNTYzYzAtMS40NjQ4NDQgMS4xOTUzMTItMi42NjAxNTYgMi42NjQwNjItMi42NjAxNTYgMTc1LjE4NzUgMCAyMTcuMTk5MjE5LS4wMTU2MjUgMzkyLjM5NDUzMiAwIDEuNDY0ODQ0IDAgMi42NjAxNTYgMS4xOTUzMTIgMi42NjAxNTYgMi42NjAxNTZ2MjEuNjAxNTYzYzAgMS40Njg3NS0xLjE5NTMxMiAyLjY2NDA2Mi0yLjY2MDE1NiAyLjY2NDA2MmgtNTAuNTQyOTY5Yy00LjE3NTc4MSAwLTcuNTYyNSAzLjM4MjgxMi03LjU2MjUgNy41NjI1czMuMzg2NzE5IDcuNTYyNSA3LjU2MjUgNy41NjI1aDUwLjU0Mjk2OWM5LjgwODU5NCAwIDE3Ljc4NTE1Ni03Ljk4MDQ2OSAxNy43ODUxNTYtMTcuNzg5MDYydi0yMS42MDE1NjNjMC05LjgwODU5NC03Ljk3NjU2Mi0xNy43ODkwNjMtMTcuNzg1MTU2LTE3Ljc4OTA2M3ptLTM3My44NTE1NjMtMjMzLjc1Yy0xLjMzOTg0MyAxLjMzOTg0NC0zLjEzNjcxOSAyLjA4NTkzOC01LjAzOTA2MiAyLjA4NTkzOC00LjU1NDY4OCAwLTYuMDM5MDYzLTMuNjMyODEyLTEwLjU1ODU5NC03LjYxMzI4MS0yLjc2OTUzMS0yLjc0NjA5NC0yLjgwMDc4MS03LjI5Mjk2OSAwLTEwLjA3NDIxOSAxOTEuNzE0ODQ0LTE5MS41ODIwMzEgNTguOTE3OTY5LTU4Ljg3MTA5NCAxODguMzc4OTA2LTE4OC4yMzgyODEgMi44NDc2NTctMi44NDc2NTcgNy40ODA0NjktMi43NSAxMC4yMTg3NS0uMDExNzE5IDIzNC4wODk4NDQgMjM0LjUzMTI1IDExOS43MDcwMzEgMTE5LjkyOTY4OCAxODcuOTA2MjUgMTg4LjI1IDEuMzUxNTYzIDEuMzQzNzUgMi4wODU5MzggMy4xMzY3MTkgMi4wODU5MzggNS4wMzEyNSAwIDQuNTM5MDYyLTMuNTc4MTI1IDUuOTg0Mzc1LTcuNjAxNTYzIDEwLjU3MDMxMi0yLjgzMjAzMSAyLjgxMjUtNy4zMjgxMjUgMi43NTc4MTMtMTAuMDg1OTM3IDAtMTgzLjkzMzU5NC0xODQuMjg5MDYyLTE3Mi40OTYwOTQtMTc0LjYxNzE4Ny0xNzcuNDEwMTU3LTE3NC42MTcxODctNS45Mzc1IDAtMi41NTg1OTMuNTQ2ODc1LTgxLjg3MTA5MyA3OC42Njc5NjktMi45NTcwMzEgMi45NTMxMjUtMi45NTcwMzEgNy43NDIxODcgMCAxMC42OTkyMTggMi45NTMxMjUgMi45NTMxMjYgNy43NDIxODcgMi45NTMxMjYgMTAuNjk5MjE5IDBsNzEuMTY0MDYyLTcxLjEwNTQ2OCAxMTkuOTY4NzUgMTIwLjIwMzEyNXYyMjcuODMyMDMxaC0yNDAuNDA2MjV2LTIyNy42OTkyMTlsMjguNTc4MTI1LTI4LjU1ODU5M2MyLjk1NzAzMS0yLjk1NzAzMiAyLjk1NzAzMS03Ljc0NjA5NC4wMTE3MTktMTAuNjk5MjE5LTIuOTUzMTI1LTIuOTU3MDMxLTcuNzQ2MDk0LTIuOTU3MDMxLTEwLjY5OTIxOSAwLTczLjEzMjgxMyA3My4wNjI1LTcuMjY1NjI1IDcuMjU3ODEyLTc1LjMzOTg0NCA3NS4yNzczNDN6bTMzMi4xMDU0NjkgMjMxLjA3MDMxM2MwIDEuNDY4NzUtMS4xOTE0MDYgMi42NjQwNjMtMi42NjAxNTYgMi42NjQwNjNoLTMwMy41ODU5MzhjLTEuNDY0ODQ0IDAtMi42NjAxNTYtMS4xOTUzMTMtMi42NjAxNTYtMi42NjQwNjN2LTIxLjYwMTU2M2MwLTEuNDY4NzUgMS4xOTUzMTItMi42NjAxNTYgMi42NjAxNTYtMi42NjAxNTZoMzAzLjU4NTkzOGMxLjQ2ODc1IDAgMi42NjAxNTYgMS4xOTE0MDYgMi42NjAxNTYgMi42NjAxNTZ6bTAgMCIvPjwvc3ZnPg==" />
+                </div>
+                <div class="TXT-1">
+                    <h1>Maison Intelligente</h1>
+                </div>
+                <div class="TXT-2">
+                    <p>Aliquip officia commodo veniam irure officia velit ut deserunt velit aute. Id proident est sint
+                        deserunt ex pariatur. Lorem proident in qui adipisicing officia magna non ad officia. Sint
+                        consequat id et laborum .</p>
+                </div>
+            </article>
+        </section>
+        <section id="SEC-3">
+            <h1 data-aos="fade-down" data-aos-once="true" data-aos-delay="200">A propos de nous</h1>
+            <p data-aos="fade-up" data-aos-once="true" data-aos-delay="300">Qui dolor magna culpa dolore non. Non
+                incididunt id minim
+                exercitation non. Deserunt labore magna aliquip
+                consequat pariatur sit magna sint cillum qui tempor. Ea adipisicing quis aliqua culpa adipisicing magna
+                aliquip nostrud aute elit veniam. Magna voluptate voluptate do ea mollit cupidatat cupidatat occaecat
+                dolore ipsum aute. Exercitation est aliqua laboris reprehenderit deserunt ullamco sint aute.
+
+                Incididunt ipsum excepteur et ad ipsum eu voluptate id ullamco nisi nostrud esse quis. Officia laborum
+                deserunt commodo veniam sint non ullamco consequat nisi ea. Labore consectetur reprehenderit nostrud
+                proident esse ipsum pariatur anim est aliqua aute Lorem eiusmod. Et cillum excepteur magna labore amet
+                laboris sunt eiusmod quis labore.
+                Anim laboris ut tempor fugiat labore sint in ullamco deserunt. Laborum qui aliquip eiusmod et deserunt
+                voluptate consequat officia laborum sunt ipsum fugiat sint minim. Commodo Lorem aute velit ullamco Lorem
+                consectetur. Proident do in elit non nostrud ad id labore in tempor. Sint enim id ex consectetur magna.
+                Non tempor velit pariatur minim non eu.</p>
+            <div id="btn" data-aos="fade-down" data-aos-once="true" data-aos-delay="200">
+                <button>Lire La Suit</button>
+            </div>
+        </section>
+        <section id="SEC-4">
+            <article data-aos="flip-left" data-aos-delay="200" data-aos-once="true">
+                <h1 data-aos="fade-down" data-aos-delay="300" data-aos-once="true">services de réparation</h1>
+                <h2 data-aos="fade-up" data-aos-delay="350" data-aos-once="true">COMMENT POUVONS-NOUS VOUS AIDER ?</h2>
+                <div class="LINE"></div>
+            </article>
+        </section>
+        <section id="SEC-5">
+            <h1 id="TXT-1" data-aos="fade-down" data-aos-delay="300" data-aos-once="true">Services populaires</h1>
+            <p id="TXT-2" data-aos="fade-up" data-aos-delay="350" data-aos-once="true">Velit esse elit id id. Ea fugiat
+                deserunt ut ea dolore. Est sunt aute dolor deserunt sit
+                consequat nostrud elit officia sunt eu qui. Ad elit do nisi eu. Ex anim pariatur sit ullamco pariatur
+                pariatur.</p>
+            <div id="ARTS">
+                <article data-aos="flip-right" data-aos-delay="400" data-aos-once="true" class="ART">
+                    <div class="img"><img src="Images/img-5.jpg" alt="img" width="400px" height="300px"></div>
+                    <div class="TXT-1">ELIMINATIONS DES ORDURES </div>
+                    <div class="TXT-2">Nisi enim qui anim do aliqua. Commodo commodo minim qui in eu. Esse magna cillum
+                        esse duis occaecat magna voluptate sint eiusmod ullamco.</div>
+                </article>
+                <article data-aos="flip-up" data-aos-delay="400" data-aos-once="true" class="ART">
+                    <div class="img"><img src="Images/img-6.jpg" alt="img" width="400px" height="300px"></div>
+                    <div class="TXT-1">ELIMINATIONS DES ORDURES </div>
+                    <div class="TXT-2">Nisi enim qui anim do aliqua. Commodo commodo minim qui in eu. Esse magna cillum
+                        esse duis occaecat magna voluptate sint eiusmod ullamco.</div>
+                </article>
+                <article data-aos="flip-left" data-aos-delay="400" data-aos-once="true" class="ART">
+                    <div class="img"><img src="Images/img-7.jpg" alt="img" width="400px" height="300px"></div>
+                    <div class="TXT-1">ELIMINATIONS DES ORDURES </div>
+                    <div class="TXT-2">Nisi enim qui anim do aliqua. Commodo commodo minim qui in eu. Esse magna cillum
+                        esse duis occaecat magna voluptate sint eiusmod ullamco.</div>
+                </article>
+            </div>
+        </section>
+        <section id="SEC-6">
+            <div id="TXT-1" data-aos="fade-up" data-aos-delay="250" data-aos-once="true">
+                <h1>Services de réparatiobs à domicile</h1>
+            </div>
+            <div id="TXT-DESC" data-aos="fade-down" data-aos-delay="350" data-aos-once="true">
+                <h1>Fugiat do cillum velit cupidatat sint. Cillum Lorem aute adipisicing ea sint commodo ea
+                    in commodo eiusmod quis sunt.</h1>
+            </div>
+            <div id="G-CONT">
+                <div class="S-CONT" data-aos="flip-up" data-aos-delay="350" data-aos-once="true">
+                    <div class="P-CONT">
+                        <div class="TXT-1">La Peinture</div>
+                        <div class="DESC">Cillum ullamco pariatur ea cillum qui nostrud ex ad. Aliquip esse aute do
+                            incididunt reprehenderit dolor incididunt sint ad esse ea consectetur labore. Occaecat culpa
+                            aliquip voluptate labore officia culpa.</div>
+                    </div>
+                    <div class="P-CONT">
+                        <div class="TXT-1">La Plomberie</div>
+                        <div class="DESC">Cillum ullamco pariatur ea cillum qui nostrud ex ad. Aliquip esse aute do
+                            incididunt reprehenderit dolor incididunt sint ad esse ea consectetur labore. Occaecat culpa
+                            aliquip voluptate labore officia culpa.</div>
+                    </div>
+                    <div class="P-CONT">
+                        <div class="TXT-1">Remodelage</div>
+                        <div class="DESC">Cillum ullamco pariatur ea cillum qui nostrud ex ad. Aliquip esse aute do
+                            incididunt reprehenderit dolor incididunt sint ad esse ea consectetur labore. Occaecat culpa
+                            aliquip voluptate labore officia culpa.</div>
+                    </div>
+                </div>
+                <div class="S-CONT" data-aos="flip-down" data-aos-delay="350" data-aos-once="true">
+                    <div class="P-CONT" id="sep">
+                        <div class="TXT-1">SOL</div>
+                        <div class="DESC">Cillum ullamco pariatur ea cillum qui nostrud ex ad. Aliquip esse aute do
+                            incididunt reprehenderit dolor incididunt sint ad esse ea consectetur labore. Occaecat culpa
+                            aliquip voluptate labore officia culpa.</div>
+                    </div>
+                    <div class="P-CONT">
+                        <div class="TXT-1">Nettyage A Domécile</div>
+                        <div class="DESC">Cillum ullamco pariatur ea cillum qui nostrud ex ad. Aliquip esse aute do
+                            incididunt reprehenderit dolor incididunt sint ad esse ea consectetur labore. Occaecat culpa
+                            aliquip voluptate labore officia culpa.</div>
+                    </div>
+                    <div class="P-CONT">
+                        <div class="TXT-1">Maison Intéligente</div>
+                        <div class="DESC">Cillum ullamco pariatur ea cillum qui nostrud ex ad. Aliquip esse aute do
+                            incididunt reprehenderit dolor incididunt sint ad esse ea consectetur labore. Occaecat culpa
+                            aliquip voluptate labore officia culpa.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="SEC-7">
+            <div class="bg">
+                <div class="BOX">
+                    <div class="Img-Box"></div>
+                </div>
+            </div>
+            <div class="TXT">
+                <div class="TXT-1" data-aos="fade-up" data-aos-delay="250" data-aos-once="true">A propos de nous</div>
+                <div class="TXT-2" data-aos="fade-down" data-aos-delay="300" data-aos-once="true">Ad elit ut id
+                    excepteur irure occaecat dolore voluptate eiusmod est. Ea enim veniam
+                    sint laboris dolore voluptate qui occaecat ipsum dolor velit excepteur. Ad cupidatat elit eiusmod
+                    excepteur.</div>
+                <div id="btn" data-aos="flip-down" data-aos-delay="350" data-aos-once="true"><button>Lire La
+                        Suit</button></div>
+            </div>
+
+        </section>
+        <section id="SEC-8">
+            <div id="BOX-1">
+                <form action="post">
+                    <input data-aos="fade-left" data-aos-delay="200" data-aos-once="true" class="inp" type="text"
+                        placeholder="Entrer votre nom">
+                    <input data-aos="fade-right" data-aos-delay="300" data-aos-once="true" class="inp" type="email"
+                        placeholder="Entrer votre email">
+                    <textarea data-aos="fade-up" data-aos-delay="400" data-aos-once="true" name="txt" id="txtar"
+                        cols="30" rows="10" placeholder="Entrer votre message"></textarea>
+                    <div id="btn" data-aos="fade-down" data-aos-delay="500" data-aos-once="true"> <input type="submit"
+                            id="sub"></div>
+
+                </form>
+                <div id="BOX-2">
+                    <div id="TXT-DESC">
+                        <div class="TXT" data-aos="fade-up" data-aos-delay="200" data-aos-once="true"> APELLEZ NOUS
+                        </div>
+                        <div class="DESC" data-aos="fade-down" data-aos-delay="250" data-aos-once="true"> 1(4515) 15 156
+                            564</div>
+                        <div class="TXT" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">EMPLACMENT</div>
+                        <div class="DESC" data-aos="fade-down" data-aos-delay="350" data-aos-once="true">West Palm
+                            Beach,
+                            4742 Travis Street</div>
+                        <div class="TXT" data-aos="fade-up" data-aos-delay="400" data-aos-once="true"> HEURE DE TRAVAIL
+                        </div>
+                        <div class="DESC" data-aos="fade-down" data-aos-delay="450" data-aos-once="true">8AM–12:30PM,
+                            2:30–6PM</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div id="FT-1"></div>
+        <div id="FT-2">
+            <h1>©YESSINETRIGUI</h1>
+        </div>
+    </footer>
+    <script src="Scripts/script.js"></script>
+    <script src="Addons/OnScrollAni/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
